@@ -9,8 +9,8 @@ flapjackViewer <- function(tasObj, width = NULL, height = NULL, elementId = NULL
 
     exportGenotypeTable(tasObj, paste0(tmpDir, "/", flpjkPrefix), format = "flapjack")
 
-    mapPath <- paste0(tmpDir, "\\", flpjkPrefix, ".flpjk.map")
-    genPath <- paste0(tmpDir, "\\", flpjkPrefix, ".flpjk.geno")
+    mapPath <- paste0(tmpDir, "/", flpjkPrefix, ".flpjk.map")
+    genPath <- paste0(tmpDir, "/", flpjkPrefix, ".flpjk.geno")
 
     mapStr <- readChar(mapPath, file.info(mapPath)$size)
     genStr <- readChar(genPath, file.info(genPath)$size)
@@ -28,7 +28,7 @@ flapjackViewer <- function(tasObj, width = NULL, height = NULL, elementId = NULL
         x         = x,
         width     = width,
         height    = height,
-        package   = 'mywidget',
+        package   = 'rFlapjack',
         elementId = elementId
     )
 }
