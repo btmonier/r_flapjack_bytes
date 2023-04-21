@@ -5958,7 +5958,8 @@
       overviewCanvas = new OverviewCanvas(overviewWidth, config.overviewHeight);
       canvasHolder.append(overviewCanvas.canvas);
       addStyleSheet();
-      canvasController = new CanvasController(canvasHolder, genotypeCanvas, overviewCanvas, config.saveSettings != false, config.width === null, config.overviewWidth === null, config.minGenotypeAutoWidth, config.minOverviewAutoWidth);
+      // Saving config.saveSettings to `true` - btmonier
+      canvasController = new CanvasController(canvasHolder, genotypeCanvas, overviewCanvas, config.saveSettings != true, config.width === null, config.overviewWidth === null, config.minGenotypeAutoWidth, config.minOverviewAutoWidth);
     }
     function createTabToggle(name, title) {
       var button = document.createElement('button');
