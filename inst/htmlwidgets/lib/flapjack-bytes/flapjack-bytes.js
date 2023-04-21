@@ -4226,7 +4226,8 @@
       key: "loadSetting",
       value: function loadSetting(key) {
         var mangledKey = "_fj-bytes::" + this.dataSet.id + "::" + key;
-        return localStorage.getItem(mangledKey);
+        //return localStorage.getItem(mangledKey);
+        return null;
       }
     }, {
       key: "saveColors",
